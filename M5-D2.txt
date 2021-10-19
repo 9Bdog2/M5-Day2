@@ -27,4 +27,36 @@ READ => GET/users/:id
 UPDATE => PUT /users/:ID(+BODY)
 DELTE => DELETE /users/:ID
 
-e
+Package.json 
+
+make gitignore file
+make src folder
+server.js file (configure and run for server)
+
+npm init -y
+
+install expressJs
+npm install express --save
+
+"type":"module", //in package.json/ allows new syntax
+
+import express from "express" // new import syntax
+
+const express = require("express") //old import syntax
+
+const server = express()
+
+server.listen(3001, () => {
+	console.log("Server is running on port:" ,3001)
+})
+
+noder ./src/server.js
+
+npm i -D nodemon@2.0.7 // automaticly initialize server 
+
+"dev": "nodemon -e js ./src/server.js"
+
+npm run dev 
+
+create studets folder and index.js
+
