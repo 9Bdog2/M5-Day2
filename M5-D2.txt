@@ -60,3 +60,4 @@ npm run dev
 
 create studets folder and index.js
 
+npm i uniqid
