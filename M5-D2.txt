@@ -1,0 +1,19 @@
+REST => architecture style for designing networked applications. It stands for Representational State Transfer
+
+ExpressJS => most popular Node Framework 
+
+REST is primarily ran over HTTP and is commonly used in Web APIs
+ExpressJs will boosts developing APIs a lot 
+
+Rest endpoints / CRUD with expressJs
+
+RESTful = representational State transfer
+
+API = Application Programming Interface
+
+Use meaningful http methods
+Sensible resources names(plural:/users,/students/12345/comments)
+Use JSON everywhere is possible 
+Use proper error/status codes (improve the clarity of the app)
+
+
