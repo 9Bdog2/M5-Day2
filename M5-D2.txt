@@ -16,4 +16,15 @@ Sensible resources names(plural:/users,/students/12345/comments)
 Use JSON everywhere is possible 
 Use proper error/status codes (improve the clarity of the app)
 
+GET - RES 200
+POST - RES 201
+PUT - RES 200
+Delete - RES 204-No content
+
+CREATE => POST/users (+BODY)
+READ => GET/users (+optional Query Parameters)
+READ => GET/users/:id
+UPDATE => PUT /users/:ID(+BODY)
+DELTE => DELETE /users/:ID
+
 
