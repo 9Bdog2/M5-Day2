@@ -30,15 +30,22 @@ authorsRouter.get("/", (req, res) => {
 
 authorsRouter.post(
   "/",
-  body("email").custom((value) => {
+  /*  body("email").custom((value) => {
     const fileContent = fs.readFileSync(authorsJSONPath);
     const authors = JSON.parse(fileContent);
-    const author = authors.find((author) => author.email === value);
+    const author = authors.find((author) => author.email === req.body.email);
     console.log(author);
     if (author) {
       throw new Error("This email is already in use");
     }
     res.status(201).send(authors);
+  }), */
+  body("email").custom((email) => {
+    return req.body.findUserByEmail(email).then((author) => {
+      if (author) {
+        return Promise.reject("E-mail already in use");
+      };
+    });
   }),
   (req, res) => {
     const newAuthor = {
